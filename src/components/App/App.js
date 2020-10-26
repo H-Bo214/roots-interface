@@ -1,27 +1,25 @@
 import React from 'react';
-import logo from '../../logo.svg';
+import { Switch, Route } from 'react-router-dom';
+import BookTree from '../BookTree/BookTree';
+import RecipeBook from '../RecipeBook/RecipeBook';
+import Nav from '../Nav/Nav';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello World!</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
+    <div>
+      <Nav />
+      <Switch>
+        <Route
+          path='/recipe-book/:bookId'
+          render={({ match }) => {
+            return <RecipeBook />;
+          }}
+        />
+        <Route path='/' component={BookTree} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;

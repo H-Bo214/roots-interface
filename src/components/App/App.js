@@ -5,10 +5,16 @@ import BookTree from '../BookTree/BookTree';
 import RecipeBook from '../RecipeBook/RecipeBook';
 import NewRecipeForm from '../NewRecipeForm/NewRecipeForm';
 import SingleRecipe from '../SingleRecipe/SingleRecipe';
+
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
+
 import './App.css';
+// const client  = new ApolloClient({// uri:'your graphQL route'})
 
 const App = () => {
   return (
+  // <ApolloProvider client={/* should be 'client', no quotes */}>
     <div>
       <Nav />
       <Switch>
@@ -39,6 +45,7 @@ const App = () => {
         <Route path='/' component={BookTree} />
       </Switch>
     </div>
+  // </ApolloProvider> 
   );
 };
 

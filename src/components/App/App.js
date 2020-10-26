@@ -15,8 +15,8 @@ import './App.css';
 const App = () => {
   return (
   // <ApolloProvider client={/* should be 'client', no quotes */}>
-    <div>
-      <Nav />
+    <div className='App'>
+     
       <Switch>
         <Route
           path='/recipe-book/:bookId'
@@ -44,6 +44,7 @@ const App = () => {
         />
         <Route path='/' component={BookTree} />
       </Switch>
+      <Nav />
     </div>
   // </ApolloProvider> 
   );

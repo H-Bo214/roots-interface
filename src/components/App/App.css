@@ -1,6 +1,7 @@
 .App {
   display: grid;
   grid-template-columns: 3fr .5fr;
-  background-color: #E0D3C4;
+  background-color: #8A9D88;
   height: 100vh;
+  color: #fcf0e1 ;
 }

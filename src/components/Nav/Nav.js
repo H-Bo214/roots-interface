@@ -7,9 +7,10 @@ const Nav = () => {
   return (
     <nav>
       <Link to='/'>
-        <img src={rootsLogo} alt='logo with word roots' />
+        <img src={rootsLogo} alt='logo with word roots' className='rootslogo' />
       </Link>
-      <h2>User Name</h2>
+      {/* I will need to get the user name from the global state*/}
+      <h2 className='nav-username'>Horacio The Badass</h2>
     </nav>
   );
 };

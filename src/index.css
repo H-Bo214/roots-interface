@@ -1,13 +1,21 @@
+@font-face {
+  font-family: Standard;
+  src: url('./assets/Old_Standard_TT/OldStandardTT-Regular.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url('./assets/Ubuntu/Ubuntu-Regular.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Standard;
+  background-color: #95a792;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

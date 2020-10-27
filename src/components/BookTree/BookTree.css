@@ -1,3 +1,22 @@
 .BookTree {
   border: 2px solid red;
 }
+
+.user-cook-books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px 0px
+}
+
+.family-cookbook img {
+  width: 100px;
+}
+
+.user-icon-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12em;
+}
+.user-img {
+  width: 100px;
+}

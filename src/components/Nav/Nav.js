@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <nav>
       <Link to='/'>
-        <img src={rootsLogo} alt='logo with word roots' />
+        <img src={rootsLogo} alt='logo with word roots'  className='roots-logo'/>
       </Link>
       <h2>User Name</h2>
     </nav>

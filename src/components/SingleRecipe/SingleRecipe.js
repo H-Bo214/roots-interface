@@ -16,12 +16,21 @@ const SingleRecipe = () => {
   });
 
   return (
-    <div>
-      <h1>{mockRecipe.recipeName}</h1>
-      <h2>{mockRecipe.recipeAuthor}</h2>
-      <p>{mockRecipe.description}</p>
-      {recipeIngredients}
-      <p>{mockRecipe.instructions}</p>
+    <div className='recipe-page-background'>
+      <div className='recipe-page-paper'>
+        <article className='recipe-page-content'>
+          <div className='recipe-text'>
+            <h1>{mockRecipe.recipeName}</h1>
+            <br></br>
+            <p>{mockRecipe.recipeAuthor}</p>
+            <p>{mockRecipe.description}</p>
+            <br></br>
+            {recipeIngredients}
+            <br></br>
+            <p className='recipe-instructions'>{mockRecipe.instructions}</p>
+          </div>
+        </article>
+      </div>
     </div>
   );
 };

@@ -1,3 +1,8 @@
+.recipe-page-background {
+  background: url('../../assets/knife-cutting-board.jpg');
+  background-size: cover;
+}
+
 .recipe-page-paper {
   position: relative;
   width: 90%;
@@ -11,7 +16,9 @@
   overflow: hidden;
   transform: rotate(-10deg);
   top: 3vh;
+  box-shadow: 3px 3px 6px 4px grey;
 }
+
 .recipe-page-paper:before {
   content: '';
   position: absolute;

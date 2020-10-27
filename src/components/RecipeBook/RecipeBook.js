@@ -2,24 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './RecipeBook.css';
 
+import { mockCookBook } from '../../mockData/mockData';
+
 const RecipeBook = (props) => {
-  const listOfRecipes = (
-    <ul>
-      <li>Recipe 1 Name</li>
-      <li>Recipe 2 Name</li>
-      <li>Recipe 3 Name</li>
-      <li>Recipe 4 Name</li>
-    </ul>
-  );
+  // make gql for the cookbook based on an id
+  const listOfRecipes = mockCookBook.recipes.map((recipe) => {
+    return <li key={recipe.recipeId}>{recipe.recipeName}</li>;
+  });
+
   return (
-    <div>
-      <h1>BookTitle</h1>
-      <p>Book Owner</p>
+    <section>
+      <h1>{mockCookBook.name}</h1>
+      <p>{mockCookBook.author.userName}</p>
       {listOfRecipes}
-      <Link to={`/add-recipe/${props.bookId}`}>
+      <Link to={`/add-recipe/${mockCookBook.id}`}>
         <button>Add Recipe</button>
       </Link>
-    </div>
+    </section>
   );
 };
 

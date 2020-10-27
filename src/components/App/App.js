@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
   return (
     // <ApolloProvider client={/* should be 'client', no quotes */}>
-    <body className='App'>
+    <body>
       <Switch>
         <Route
           path='/recipe-book/:bookId'

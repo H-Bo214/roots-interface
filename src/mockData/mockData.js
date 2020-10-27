@@ -51,24 +51,18 @@ export const mockCookBook  =
 }
 
 export const mockUser = 
-  {
-    name: 'Tyler',
-    userId: '2',
-    ownedBooks: [
-      {
-        bookId: '10',
-        bookName: 'Creator family'
-      },
-      {
-        bookId: '3',
-        bookName: 'Dad\'s cookbook'
-      },
-      {
-        bookId: '5',
-        bookName: 'Mom\'s cookbook'
-      }, 
-    ]
-  }
-
-
+{
+  name: 'Tyler',
+  userId: '2',
+  ownedBooks: [
+    {
+      bookId: '10',
+      bookName: 'The Creator family cookbook'
+    },
+    {
+      bookId: '3',
+      bookName: 'Grandmas cookbook'
+    }
+  ]
+}
 

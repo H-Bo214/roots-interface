@@ -15,6 +15,14 @@ const BookTree = () => {
   })
 
   const addNewBook = (bookName) => {
+    // Will need to send a mutation request to BE to add/create a new cookbook // Endpoint name createCookbook // 
+    // format//
+    //      {
+    //        title: bookName
+    //        author: {
+    //          userId: user.userId,
+    //          userName: user.name
+    //       }
     const newBook = [...user.ownedBooks, { bookName }]
     const updatedUser = 
     {
@@ -22,6 +30,7 @@ const BookTree = () => {
       userId: user.userId,
       ownedBooks: newBook
     }
+  
     setUser(updatedUser)
   }
 

@@ -6,7 +6,6 @@ const AddCookBook = ( { addNewBook } ) => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log('hello')
     if (!value) return;
     addNewBook(value)
     setValue('')
@@ -24,7 +23,7 @@ const AddCookBook = ( { addNewBook } ) => {
         value={value}
         onChange={ e => setValue(e.target.value)}
       />
-      <button type='button' onClick={handleSubmit}>Add to my book collection</button>
+      <button type='button' onClick={handleSubmit}>ADD TO COOKBOOKS</button>
     </form>
   )
 }

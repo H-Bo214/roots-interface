@@ -1,5 +1,7 @@
 .BookTree {
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  font-family: 'Old Standard TT', serif;
+  /* background-color: #E0D3C4; */
 }
 
 .user-cook-books {
@@ -20,4 +22,17 @@
 }
 .user-img {
   width: 100px;
+  padding-top: 2em;
 }
+
+/* colors */
+/* dark - #38373F
+dark green - #4E615D
+light green  - #8A9D88
+tan - #E0D3C4 */
+
+
+
+/* fonts */
+/* font-family: 'Old Standard TT', serif;
+font-family: 'Ubuntu', sans-serif; */

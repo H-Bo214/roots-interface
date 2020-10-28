@@ -5,11 +5,13 @@ const AddRecipeFromBook = () => {
   return (
     <form className='book-form'>
       <h3>Add from an existing cookbook</h3>
-      <select name='books'>
+      <label htmlFor='book-selection'>Select a book:</label>
+      <select id='book-selection' name='books'>
         <option>Book1</option>
         <option>Book2</option>
       </select>
-      <select name='books'>
+      <label htmlFor='recipe-selection'>Select a recipe:</label>
+      <select id='recipe-selection' name='recipe'>
         <option>Recipe1</option>
         <option>Recipe2</option>
       </select>

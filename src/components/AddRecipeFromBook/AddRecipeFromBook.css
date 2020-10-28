@@ -1,14 +1,15 @@
 .book-form {
   border: 2px solid #4E615D;
   margin-right: 5em;
-  margin-left: 4em;
   display: flex;
   flex-direction: column;
   padding: 2em;
   align-items: center;
   border-radius: 6px;
   margin-top: 5em;
-  height: 37.5em;
+  height: 41em;
+  background: #8a9d88;
+  opacity: .93;
 }
 
 .book-form select {

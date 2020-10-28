@@ -10,6 +10,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 import './App.css';
+import AddRecipe from '../AddRecipe/AddRecipe';
 // const client  = new ApolloClient({// uri:'your graphQL route'})
 
 const App = () => {
@@ -28,19 +29,13 @@ const App = () => {
         <Route
           path='/add-recipe/:bookId'
           render={({ match }) => {
-            return <NewRecipeForm />;
+            return <AddRecipe />;
           }}
         />
         <Route
           path='/single-recipe/:recipeId'
           render={({ match }) => {
             return <SingleRecipe />;
-          }}
-        />
-        <Route
-          path='/add-recipe/:bookId'
-          render={({ match }) => {
-            return <NewRecipeForm />;
           }}
         />
         <Route path='/' component={BookTree} />

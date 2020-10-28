@@ -33,18 +33,6 @@ const NewRecipeForm = () => {
     <div>
       <h1>Add a recipe</h1>
       <div className='NewRecipeForm'>
-        <form className='book-form'>
-          <h3>Add from an existing cookbook</h3>
-          <select name='books'>
-            <option>Book1</option>
-            <option>Book2</option>
-          </select>
-          <select name='books'>
-            <option>Book1</option>
-            <option>Book2</option>
-          </select>
-          <button className='add-recipe-button' type ='button' onClick={() => console.log('add recipe')}>ADD TO MY RECIPE BOOK</button>
-        </form>
         <form className='add-recipe-form'>
           <div className='recipe-details'>
             <input className='author' type='text' name='author' placeholder='Recipe Author' onChange={(e) => setAuthor(e.target.value)} />

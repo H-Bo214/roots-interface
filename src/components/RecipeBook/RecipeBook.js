@@ -23,7 +23,7 @@ const RecipeBook = (props) => {
           </div>
           <div className='right-page'>
             <p className='author'>Hosted by: {mockCookBook.author.userName}</p>
-
+            <h3 className='right-page-title'>Recipes:</h3>
             <article className='recipe-list'>{listOfRecipes}</article>
             <Link to={`/add-recipe/${mockCookBook.id}`}>
               <button>Add Recipe</button>

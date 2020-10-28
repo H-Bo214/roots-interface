@@ -15,7 +15,9 @@ import './App.css';
 const App = () => {
   return (
     // <ApolloProvider client={/* should be 'client', no quotes */}>
-    <body className='App'>
+    // changed 'body' back to div due to console error. unable to have a body tag as a child of a div.
+    // There seem to be two routes to the same location.
+    <div className='App'>
       <Switch>
         <Route
           path='/recipe-book/:bookId'
@@ -44,7 +46,7 @@ const App = () => {
         <Route path='/' component={BookTree} />
       </Switch>
       <Nav />
-    </body>
+    </div>
     // </ApolloProvider>
   );
 };

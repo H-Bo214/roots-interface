@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import './NewRecipe.css';
 import { mockUser, mockCookBook } from '../../mockData/mockData'
 
@@ -30,59 +30,51 @@ const NewRecipeForm = () => {
   // }
   
   return (
-    <form>
-      <h1>Add A Recipe</h1>
-
-      <input type='text' name='author' placeholder='Recipe Author' onChange={(e) => setAuthor(e.target.value)} />
-      <input type='text' name='name' placeholder='Name of Recipe' onChange={(e) => setName(e.target.value)} />
-      <textarea type='text' name='description' placeholder='Recipe Description' onChange={(e) => setDescription(e.target.value)} />
-      <textarea type='text' name='instructions' placeholder='Recipe Instructions' onChange={(e) => setInstructions(e.target.value)}/>
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-
-      <input type='text' name='ingredient1' placeholder='Ingredient' />
-      <input type='text' name='ingredient1unit' placeholder='Unit' />
-      <input type='text' name='measurement' placeholder='Measurement' />
-      <button type ='button' onClick={() => console.log('add recipe')}>Add to my recipe book</button>
-    </form>
+    <div>
+      <h1>Add a recipe</h1>
+      <div className='NewRecipeForm'>
+        <form className='book-form'>
+          <h3>Add from an existing cookbook</h3>
+          <select name='books'>
+            <option>Book1</option>
+            <option>Book2</option>
+          </select>
+          <select name='books'>
+            <option>Book1</option>
+            <option>Book2</option>
+          </select>
+          <button className='add-recipe-button' type ='button' onClick={() => console.log('add recipe')}>ADD TO MY RECIPE BOOK</button>
+        </form>
+        <form className='add-recipe-form'>
+          <div className='recipe-details'>
+            <input className='author' type='text' name='author' placeholder='Recipe Author' onChange={(e) => setAuthor(e.target.value)} />
+            <input className='recipe-name' type='text' name='name' placeholder='Name of Recipe' onChange={(e) => setName(e.target.value)} />
+            <textarea className='description' type='text' name='description' placeholder='Recipe Description' onChange={(e) => setDescription(e.target.value)} />
+            <textarea className='instructions' type='text' name='instructions' placeholder='Recipe Instructions' onChange={(e) => setInstructions(e.target.value)}/>
+            <div className='button-parent'>
+              <button className='add-recipe-button' type ='button' onClick={() => console.log('add recipe')}>ADD TO MY RECIPE BOOK</button>
+            </div>
+          </div>
+          <div className='ingredients-parents'>
+            <input className='ingredient' type='text' name='ingredient1' placeholder='Ingredient' />
+            <div className='unit-measurement-parent'>
+              <input className='unit' type='text' name='ingredient1unit' placeholder='Unit' />
+              <input className='measurement' type='text' name='measurement' placeholder='Measurement' />
+            </div>
+            <input className='ingredient' type='text' name='ingredient1' placeholder='Ingredient' />
+            <div className='unit-measurement-parent'>
+              <input className='unit' type='text' name='ingredient1unit' placeholder='Unit' />
+              <input className='measurement' type='text' name='measurement' placeholder='Measurement' />
+            </div>
+            <input className='ingredient' type='text' name='ingredient1' placeholder='Ingredient' />
+            <div className='unit-measurement-parent'>
+              <input className='unit' type='text' name='ingredient1unit' placeholder='Unit' />
+              <input className='measurement' type='text' name='measurement' placeholder='Measurement' />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 

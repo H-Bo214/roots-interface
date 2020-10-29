@@ -3,3 +3,11 @@ node_js:
   - "node"
 notifications:
   email: false
+
+deploy:
+  provider: heroku
+  api_key:   
+    secure: 2d9c42b9-4a8e-4caf-a8f6-d408995fcc97
+  app: roots-interface
+  on:
+    repo: roots-capstone/roots-interface

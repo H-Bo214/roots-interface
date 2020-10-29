@@ -2,7 +2,6 @@ import React from 'react'
 import { render, screen, fireEvent, queryByTestId } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import NewRecipeForm from '../NewRecipeForm/NewRecipeForm'
-// import { act, renderHook } from '@testing-library/react-hooks'
 import { MemoryRouter } from 'react-router-dom'
 
 

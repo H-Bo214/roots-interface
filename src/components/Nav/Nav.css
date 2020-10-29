@@ -3,6 +3,7 @@
   margin: 3vw;
   border-radius: 25%;
   box-shadow: 10px 10px 20px 10px rgba(149, 167, 146, 0.54);
+  transition: transform 0.3s;
 }
 
 .rootslogo:hover {

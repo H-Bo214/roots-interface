@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import './NewRecipeForm.css';
 import { mockUser, mockCookBook } from '../../mockData/mockData'
-import { ValuesOfCorrectTypeRule } from 'graphql';
 
 const NewRecipeForm = () => {
   const [author, setAuthor] = useState('');

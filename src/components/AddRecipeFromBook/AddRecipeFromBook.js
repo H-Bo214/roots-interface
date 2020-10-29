@@ -15,7 +15,7 @@ const AddRecipeFromBook = () => {
         <option>Recipe1</option>
         <option>Recipe2</option>
       </select>
-      <button className='add-recipe-button' type ='button' onClick={() => console.log('add recipe')}>ADD TO MY RECIPE BOOK</button>
+      <button className='add-recipe-button' type ='button' onClick={() => console.log('add recipe')}>Add to my recipe book</button>
     </form>
   )
 }

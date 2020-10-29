@@ -49,8 +49,8 @@ const NewRecipeForm = () => {
           <input id='unit1' className='unit' type='text' name='unit' placeholder='Unit' value={ingredient.unit} onChange={e => handleChange(e, index)}/>
           <label htmlFor='measurement1'>Measurement:</label>
           <input id='measurement1' className='measurement' type='text' name='measurement' placeholder='Measurement' value={ingredient.measurement} onChange={e => handleChange(e, index)}/>
-          <button onClick={() => handleAddIngredient()}>Ingredient +</button>
-          <button onClick={() => handleRemoveIngredient(index)}>Ingredient -</button>
+          <button onClick={() => handleAddIngredient()}>Ingredient + </button>
+          <button onClick={() => handleRemoveIngredient(index)}>Ingredient - </button>
         </div> 
       </div>
     })
@@ -72,7 +72,7 @@ const NewRecipeForm = () => {
             <label htmlFor='instructions'>Instructions:</label>
             <textarea id='instructions' className='instructions' type='text' name='instructions' placeholder='Recipe Instructions' onChange={(e) => setInstructions(e.target.value)}/>
             <div className='button-parent'>
-              <button className='add-recipe-button' type ='button' onClick={handleSubmit}>ADD TO MY RECIPE BOOK</button>
+              <button className='add-recipe-button' type ='button' onClick={handleSubmit}>Add to my recipe book</button>
             </div>
           </div>
           <div className='ingredients-parents'>

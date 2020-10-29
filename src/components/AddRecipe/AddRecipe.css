@@ -1,0 +1,10 @@
+.AddRecipe {
+  display: flex;
+  justify-content: center;
+  background: url(../../assets//root-b-w.jpg);
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: cover;
+  opacity: .8;
+}

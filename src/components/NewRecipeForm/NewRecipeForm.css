@@ -1,5 +1,6 @@
 .NewRecipeForm {
   display: flex;
+  margin-top: 5em;
 }
 
 .recipe-details {
@@ -17,12 +18,14 @@
 
 .add-recipe-form {
   border: 2px solid #4E615D;
-  display: flex;
+  /* display: flex; */
   justify-content: space-evenly;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  /* padding-top: 2em;
+  padding-bottom: 3em; */
   border-radius: 6px;
   width: 60em;
+  background: #8a9d88;
+  opacity: .93;
 }
 
 .author {
@@ -56,7 +59,8 @@
 
 .unit {
   padding: 1em;
-  margin-right: 2em;
+  /* margin-right: 2em; */
+  margin-bottom: 2em;
 }
 
 .measurement {
@@ -81,6 +85,8 @@ h1 {
   margin-bottom: 2em;
   border-bottom: 1px solid #000;
   padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .button-parent {
@@ -88,7 +94,15 @@ h1 {
   justify-content: center;
 }
 
-.book-form {
+label {
+  margin-bottom: .3em;
+  font-size: 18px;
+}
+
+/* input {
+  font-size: 16px;
+} */
+/* .book-form {
   border: 2px solid #4E615D;
   margin-right: 5em;
   margin-left: 4em;
@@ -108,4 +122,22 @@ h1 {
 h3 {
   margin-bottom: 2.5em;
   margin-top: 4em;
+} */
+
+/* .add-a-recipe {
+  display: flex;
+} */
+.recipe-details-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.unit-measurement-parent button {
+  margin: 1em 0;
+  padding: .5em;
+  width: 15em;
+  color: white;
+  border-radius: 3px;
+  background-color: #38373F;
+  font-size: 14px;
 }

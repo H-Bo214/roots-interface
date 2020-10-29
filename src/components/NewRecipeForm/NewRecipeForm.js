@@ -97,13 +97,13 @@ const NewRecipeForm = () => {
                 placeholder='Recipe author' 
                 onChange={(e) => setAuthor(e.target.value)} 
               />
-              <label htmlFor='recipe-name'>Name:</label>
+              <label htmlFor='recipe-name'>Recipe name:</label>
               <input 
                 id='recipe-name' 
                 className='recipe-name' 
                 type='text' 
                 name='name' 
-                placeholder='Name of recipe' 
+                placeholder='Recipe name' 
                 onChange={(e) => setName(e.target.value)} 
               />
               <label htmlFor='description'>Description:</label>

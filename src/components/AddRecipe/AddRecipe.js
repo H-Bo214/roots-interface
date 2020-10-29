@@ -6,7 +6,8 @@ import './AddRecipe.css'
 const AddRecipe = () => {
   return (
     <div className='AddRecipe'>
-      <AddRecipeFromBook />
+      {/* Will need to render this component once we implement this feature. See the AddRecipeFromBook component file */}
+      {/* <AddRecipeFromBook /> */}
       <NewRecipeForm />
     </div>
   )

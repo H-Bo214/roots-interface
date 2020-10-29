@@ -1,27 +1,41 @@
 .cookbook-form {
-  border: 2px solid #4E615D;
+  border: 2px solid #4e615d;
   padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
-  height: 16em;
-  width: 12em;
+  height: 25vh;
+  width: 12vw;
   font-size: 20px;
+  background-color: #e3d9ca;
+  text-align: center;
+}
+
+.cookbook-form * {
+  margin: 0;
 }
 
 .cookbook-form input {
-  padding: .7em;
+  padding: 0.7em;
   margin-bottom: 2em;
   font-size: 16px;
 }
 
 .cookbook-form button {
-  padding: 1em 1.6em;
   color: white;
   border-radius: 3px;
-  background-color: #38373F;
+  background-color: #fff;
   font-size: 14px;
+  font-family: Standard;
+  padding: 10px 20px;
+  border: 2px solid #8b4513;
+  color: #8b4513;
+  margin: 20px auto;
+  text-decoration: none;
 }
 
+.cookbook-form button:hover {
+  transform: scale(1.02);
+}

@@ -1,131 +1,161 @@
-### Working model for the data needed and sent between FE and BE.
-* Get a Recipe
- ```
- {
-  id: 'string',
-  recipeName: 'string',
-  recipeAuthor: 'string',
-  description: 'sting', /* option to be empty*/
-  instructions: 'string',
-  ingredients: [
-    {
-      name: 'sting',
-      unit: 'sting', /* option to be empty*/
-      measurement: 0,
-    },
-    {
-      name: 'sting',
-      unit: 'sting', /* option to be empty*/
-      measurement: 0,
-    },
-  ]
- } 
- ```
+# Leomund's Superhut
 
-* Get a CookBook
-```
-{
-  name: 'string'
-  id: 'string'
-  author: {
-    userId: 'string',
-    userName: 'string'
-  }
-  members: [
-    {
-      userId: 'string',
-      userName: 'string',
-    },
-    {
-      userId: 'string',
-      userName: 'string',
-    },
-  ],
-  recipes: [
-    {
-      recipeId: 'string',
-      recipeName: 'string'
-    },
-    {
-      recipeId: 'string',
-      recipeName: 'string'
-    },
-  ]
-}
-```
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-* Get a Users Owned Books
-```
-[
-  {
-    bookId: 'string',
-    bookName: 'string'
-  },
-  {
-    bookId: 'string',
-    bookName: 'string'
-  }
-]
-```
+<img src="./src/assets/roots-title-logo.jpg" alt="Logo for Roots" width="250px" height="250px">
 
-* Submit a Recipe
- ```
- {
-  recipeName: 'string',
-  recipeAuthor: 'string',
-  description: 'sting', /* option to be empty*/
-  instructions: 'string',
-  ingredients: [
-    {
-      name: 'sting',
-      unit: 'sting', /* option to be empty*/
-      measurement: 0,
-    },
-    {
-      name: 'sting',
-      unit: 'sting', /* option to be empty*/
-      measurement: 0,
-    },
-  ]
- }
- ```
+## Table of Contents
 
-*  Add a CookBook
-```
-{
-  name: 'string'
-  author: {
-    userId: 'string',
-    userName: 'string'
-  }
-  members: [
-    {
-      userId: 'string',
-      userName: 'string',
-    },
-    {
-      userId: 'string',
-      userName: 'string',
-    },
-  ],
-  recipes: [
-    {
-      recipeId: 'string',
-      recipeName: 'string'
-    },
-    {
-      recipeId: 'string',
-      recipeName: 'string'
-    },
-  ]
-}
-```
+- [Overview](#overview)
+- [How to use](#how-to-use)
+- [Project story](#project-story)
+- [Installation](#installation)
+- [Functionality](#functionality)
+- [Contributing](#contributing)
+- [Acknowledgements and Resources](#acknowledgements-and-resources)
 
-#### Future data interations
-* Get CookBook Users
-* Get Users List
-* Add a User to a Cookbook
-* Get Books User is a member of
+<!-- Brief Description -->
+
+## Overview
+
+Roots is a site that allows for a user to keep family cookbooks in a digital format, adding recipes to multiple books and being able to view and navigate the books and recipes through a pleasant UI/UX. 
+
+The site was created for a school project that had the designers design an MVP with a Backend and Frontend team. They had to manage expectation versus time constraints and communicate the needs between both teams as new frameworks and libraries were used for learning purposes.
+
+## How to use
+
+* On load the application will act as a user has already logged in. The project restricted the addition of authentication to fucus on user story and experience. The landing page will have simple navigation showing all of the users owned cookbooks gathered from their data. There is also a location for the user to add new cookbooks to their collection. 
+* Selecting a cookbook will navigate you to a page where you can view the recipes associated to that cookbook as well as the title and owner. This page will act as navigation to each of the recipes and a page where they can add new recipes. In the future we will add an area for a user to add family members that they want to associate with the book. This could be expanded further after authentication to allow the added family members to have their own accounts and the ability to edit the cookbook.
+* Selecting a recipe from the cookbook will take the user to a simple page that displays the infromation from the recipe inlcuding author, description, ingredients and instructions.
+* From the cookbook selecting the add recipe will take the user to a page form that allows the user to input a new recipe by filling out feilds for the details.
+
+## Built With
+
+- React 16
+- CSS
+- Apollo
+- GraphQl
+- Heroku
+- Travis CI
+
+## Project Story
+
+The full project can be found [Here](https://github.com/roots-capstone) and its [combined project board](https://github.com/orgs/roots-capstone/projects/1) where the status of future and completed features is tracked.   
+Collaboration with the BE lead us to create a [GIST](https://gist.github.com/neeruram1/f02a12c6da50da3520f797a72ec53f14) to keep a current vision of the data flow, mutations, and queries.
+
+### Wins
+
+The Styling of many of the components evovled as we met and presented with the BE group to become a plesant UX.
+
+### Struggles
+
+Learning graphQL and appollo lead us to spend a fair amount of time researching all of the capabilities of it. The cache proved challenging to understand in its early stages.
+
+## Installation
+
+**Fork this repository:**
+
+https://github.com/roots-capstone/roots-interface/
+
+**Clone your forked repository**
+
+`git clone` and the copied URL
+
+**Change into the directory and install the project dependencies**
+
+`cd` into directory and run `npm install` for dependencies
+
+### How to see the product
+
+In terminal, go to the project directory and run 'npm start' to open the project in the browser.
+You can also see the product online here. [Deployed](https://roots-interface.herokuapp.com/)
+
+## Functionality
+
+### Landing Page, Adding a new Book, Navigating to a Book
+
+![GIF DESCRIPTION.... ](gif url)
+
+### Recipe Book, Navigating to a Recipe, Navigating to the add form
+
+![GIF DESCRIPTION.... ](gif url)
+
+### Single Recipe
+
+![GIF DESCRIPTION.... Likely just an image of the page](gif url)
+
+### Adding a Recipe, Dynamically expanding Ingredients
+
+![GIF DESCRIPTION.... ](gif url)
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+See the [open issues](https://github.com/roots-capstone/roots-interface/issues) for a list of proposed features (and known issues).
+
+- Fork the Project
+
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+
+- Push to the Branch (`git push origin feature/AmazingFeature`)
+
+- Open a Pull Request
+
+## Authors
+
+### Front End
+👤 **Tyler Haglund**
+
+- Github: [relyt4me](https://github.com/relyt4me)
+- LinkedIn: [Tyler He/Him](https://www.linkedin.com/in/tyler-haglund/)
+
+👤 **Horacio Borrego**
+
+- Github: [H-Bo214](https://github.com/H-Bo214)
+- LinkedIn: [Horacio He/Him](https://www.linkedin.com/in/horacio-borrego-4a52851b0/)
+
+
+## Acknowledgements and Resources
+
+### Back End Team
+👤 **Neeru Ram**
+
+- Github: [neeruram1](https://github.com/neeruram1)
+- LinkedIn: [Neeru She/Her](https://www.linkedin.com/in/neeru-ram-81a2b867/)
+
+👤 **Ryan Laleh**
+
+- Github: [RyN21](https://github.com/RyN21)
+- LinkedIn: [Ryan He/Him](https://www.linkedin.com/in/ryan-laleh-0a81511a7/)
+
+👤 **Jessye Ejdelman**
+
+- Github: [ejdelsztejn](https://github.com/ejdelsztejn)
+- LinkedIn: [Jessye](https://www.linkedin.com/in/jessye-ejdelman/)
+
+👤 **Michael Alex Lynch**
+
+- Github: [mlynch5187](https://github.com/mlynch5187)
+- LinkedIn: [Michael He/Him](https://www.linkedin.com/in/michaelalexlynch/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+[Original Project Link](https://mod4.turing.io/projects/capstone.html)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/roots-capstone/roots-interface.svg?style=flat-square
+[contributors-url]: https://github.com/roots-capstone/roots-interface/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/roots-capstone/roots-interface.svg?style=flat-square
+[forks-url]: https://github.com/roots-capstone/roots-interface/network/members
+[stars-shield]: https://img.shields.io/github/stars/roots-capstone/roots-interface.svg?style=flat-square
+[stars-url]: https://github.com/roots-capstone/roots-interface/stargazers
+[issues-shield]: https://img.shields.io/github/issues/roots-capstone/roots-interface.svg?style=flat-square
+[issues-url]: https://github.com/roots-capstone/roots-interface/issues
 

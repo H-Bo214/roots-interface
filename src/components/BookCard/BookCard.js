@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
-import './BookCard.css'
-// import bookIcon from '../../assets/book-icon.png'
-import spiralBook from '../../assets/spiral-book.svg'
+import React, { Fragment } from 'react';
+import './BookCard.css';
+import spiralBook from '../../assets/spiral-book.svg';
+
 const BookCard = ({ cookBookName, bookId }) => {
   return (
     <Fragment>
@@ -9,7 +9,7 @@ const BookCard = ({ cookBookName, bookId }) => {
           <h3>{cookBookName}</h3>
           <img 
             src={spiralBook}
-            alt='black book icon'
+            alt='spiral book icon'
           />
         </section>
     </Fragment>

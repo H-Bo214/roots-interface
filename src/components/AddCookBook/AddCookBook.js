@@ -14,7 +14,9 @@ const AddCookBook = ({ addNewBook }) => {
   return (
     <form className='cookbook-form' onSubmit={handleSubmit}>
       <h3>Add a new cookbook</h3>
-      <input 
+      <label htmlFor='cookbook-name'></label>
+      <input
+        id='cookbook-name' 
         type='text' 
         className='new-book-input' 
         placeholder='Cookbook name...' 

@@ -1,6 +1,5 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import './NewRecipeForm.css';
-import { mockUser, mockCookBook } from '../../mockData/mockData'
 
 const NewRecipeForm = () => {
   const [author, setAuthor] = useState('');

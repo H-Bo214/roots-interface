@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import BookTree from '../BookTree/BookTree';
 import RecipeBook from '../RecipeBook/RecipeBook';
-import NewRecipeForm from '../NewRecipeForm/NewRecipeForm';
 import SingleRecipe from '../SingleRecipe/SingleRecipe';
 
 import ApolloClient from 'apollo-boost';

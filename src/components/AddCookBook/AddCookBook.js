@@ -14,8 +14,14 @@ const AddCookBook = ({ addNewBook }) => {
   return (
     <form className='cookbook-form' onSubmit={handleSubmit}>
       <h3>Add a new cookbook</h3>
-      <input type='text' className='new-book-input' placeholder='Cookbook name...' value={value} onChange={(e) => setValue(e.target.value)} />
-      <button type='submit'>ADD TO COOKBOOKS</button>
+      <input 
+        type='text' 
+        className='new-book-input' 
+        placeholder='Cookbook name...' 
+        value={value} 
+        onChange={(e) => setValue(e.target.value)} 
+      />
+      <button type='submit'>Add to cookbooks</button>
     </form>
   );
 };

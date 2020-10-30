@@ -1,20 +1,13 @@
 .cookbook-form {
   border: 2px solid #4e615d;
-  padding: 1em;
+  padding: 0 1em 1em 1em ;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
-  height: 25vh;
-  width: 12vw;
   font-size: 20px;
   background-color: #e3d9ca;
   text-align: center;
-}
-
-.cookbook-form * {
-  margin: 0;
 }
 
 .cookbook-form input {
@@ -27,7 +20,7 @@
   color: white;
   border-radius: 3px;
   background-color: #fff;
-  font-size: 14px;
+  font-size: 17px;
   font-family: Standard;
   padding: 10px 20px;
   border: 2px solid #8b4513;

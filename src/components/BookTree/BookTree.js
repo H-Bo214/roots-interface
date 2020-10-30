@@ -3,6 +3,7 @@ import './BookTree.css';
 import { mockUser } from '../../mockData/mockData';
 import BookCard from '../BookCard/BookCard';
 import AddCookBook from '../AddCookBook/AddCookBook';
+import userIcon from '../../assets/tan-user-icon.svg'
 
 const BookTree = () => {
   const [user, setUser] = useState(mockUser);
@@ -27,10 +28,9 @@ const BookTree = () => {
 
   return (
     <section className='BookTree'>
-      <div className='root-background'></div>
       <div className='user-icon-container'>
         <img 
-          src='https://image.flaticon.com/icons/png/512/17/17004.png' 
+          src={userIcon} 
           alt='user icon' 
           className='user-img' 
         />

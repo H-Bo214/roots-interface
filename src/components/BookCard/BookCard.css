@@ -1,22 +1,18 @@
 .family-cookbook {
   border: 2px solid#4E615D;
-  padding: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
-  height: 25vh;
-  width: 12vw;
   font-size: 20px;
   background-color: #e3d9ca;
   transition: transform 0.4s;
 }
 
-.family-cookbook * {
-  margin: 0;
-}
-
 .family-cookbook:hover {
   transform: scale(1.07);
+}
+
+.family-cookbook img {
+  width: 50%;
 }

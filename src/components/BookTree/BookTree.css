@@ -1,21 +1,8 @@
 .BookTree {
-  /* border: 2px solid red; */
   font-family: Standard;
-  /* background-color: #E0D3C4; */
-}
-
-.root-background {
-  background-image: url('../../assets/transparent-tree-with-roots-clipart-6.png');
-  height: 80vh;
-  width: 78vw;
+  background: url(../../assets//root-b-w.jpg);
   background-size: cover;
-  opacity: 0.6;
-  top: 19vh;
-  left: -2vw;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 1;
+  opacity: .8;
 }
 
 .user-cook-books {
@@ -25,14 +12,6 @@
   justify-items: center;
 }
 
-.user-cook-books * {
-  z-index: 1000;
-}
-
-.family-cookbook img {
-  width: 4vw;
-}
-
 .user-icon-container {
   display: flex;
   justify-content: center;
@@ -40,12 +19,10 @@
   padding-top: 5vh;
 }
 .user-img {
-  width: 10vw;
+  width: 8vw;
   padding-top: 2em;
-  background-color: #8a9d88;
   border-radius: 38%;
   padding-top: 0;
-  z-index: 1000;
 }
 
 /* colors */
@@ -54,6 +31,7 @@ dark green - #4E615D
 light green  - #8A9D88
 tan - #E0D3C4 */
 /* lighter tan - #fcf0e1 */
+
 
 /* fonts */
 /* font-family: 'Old Standard TT', serif;

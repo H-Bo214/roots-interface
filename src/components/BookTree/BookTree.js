@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useQuery} from '@apollo/client'
 import './BookTree.css';
 import { mockUser } from '../../mockData/mockData';
 import BookCard from '../BookCard/BookCard';
 import AddCookBook from '../AddCookBook/AddCookBook';
-import userIcon from '../../assets/tan-user-icon.svg'
+import userIcon from '../../assets/tan-user-icon.svg';
+import { GET_USER_COOKBOOKS } from '../../queries/Queries'
+
+
 
 const BookTree = () => {
   const [user, setUser] = useState(mockUser);
@@ -25,6 +29,17 @@ const BookTree = () => {
     };
     setUser(updatedUser);
   };
+
+  const userID = '1'
+  const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
+    variables: {id: userID},
+  })
+
+  if(loading) return <h1>Loading...</h1>;
+  if(error) {
+    console.log(error);
+    return <h1>error</h1>;
+  }
 
   return (
     <section className='BookTree'>

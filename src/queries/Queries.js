@@ -8,3 +8,13 @@ export const GET_USER_COOKBOOKS = gql`
     }
   }
 `;
+
+export const GET_USER = gql`
+  query getUser($id: ID!) {
+    getUser(id: $id) {
+      email
+      id
+      name
+    }
+  }
+`;

@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 //https://cors-anywhere.herokuapp.com/
 const client = new ApolloClient({
-  uri: 'https://cors-anywhere.herokuapp.com/https://glacial-falls-21490.herokuapp.com/graphql',
+  uri: 'https://glacial-falls-21490.herokuapp.com/graphql',
   cache: new InMemoryCache()
 });
 
@@ -27,3 +27,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// https://cors-anywhere.herokuapp.com/

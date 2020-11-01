@@ -5,12 +5,12 @@ import BookCard from '../BookCard/BookCard';
 import AddCookBook from '../AddCookBook/AddCookBook';
 import userIcon from '../../assets/tan-user-icon.svg';
 import { GET_USER_COOKBOOKS } from '../../queries/Queries'
-
+import { Link } from 'react-router-dom'
 
 
 const BookTree = () => {
   // Get user would go first to get an id could be done on a app load as well
-  const id = '1'
+  const id = '1'  // Will need to pass down the user id from App 
   const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
     variables: {id},
   })
@@ -23,11 +23,12 @@ const BookTree = () => {
   }, [data]);
 
   const userCookBooks = books.map((book) => {
-      return <BookCard 
-        cookBookName={book.title} 
-        key={book.id} 
-        bookId={book.id} 
-      />;
+      return <Link key={book.id} to={`/recipe-book/${book.id}`}>
+        <BookCard 
+          cookBookName={book.title}  
+          bookId={book.id} 
+        />;
+      </Link>
     });
 
   const addNewBook = (title, id) => {

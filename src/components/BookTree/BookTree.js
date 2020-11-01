@@ -30,9 +30,9 @@ const BookTree = () => {
     setUser(updatedUser);
   };
 
-  const userID = '1'
+  const id = '1'
   const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
-    variables: {id: userID},
+    variables: {id},
   })
 
   if(loading) return <h1>Loading...</h1>;
@@ -44,6 +44,7 @@ const BookTree = () => {
   return (
     <section className='BookTree'>
       <div className='user-icon-container'>
+        {console.log(data)}
         <img 
           src={userIcon} 
           alt='user icon' 

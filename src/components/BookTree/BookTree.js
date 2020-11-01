@@ -13,9 +13,10 @@ const BookTree = ({ user }) => {
   // Get user would go first to get an id could be done on a app load as well
   // Will need to pass down the user id from App 
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  // const id = user.id || '1'  NEED TO DEBUG THIS. WORKS WITH '1', BUT ERRORS WITH user.id. I think it's an async issue.
+  // NEED TO DEBUG THIS. WORKS WITH '1', BUT ERRORS WITH user.id. I think it's an async issue.
+  const id = user.id || '1'  
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  const id = user.id
+  // const id = user.id
   const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
     variables: {id},
   })

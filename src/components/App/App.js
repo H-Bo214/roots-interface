@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import BookTree from '../BookTree/BookTree';
@@ -13,15 +13,9 @@ import { GET_USER } from '../../queries/Queries'
 
 const App = () => {
   const id = '1' 
-  const { loading, error, data } = useQuery(GET_USER, {
-    variables: {id},
-  })
+  const { loading, error, data } = useQuery(GET_USER, { variables: {id} })
 
-  let [user, setUser] = useState({
-    email: '',
-    id: '',
-    name: '',
-  })
+  let [user, setUser] = useState({ email: '', id: '', name: '' })
 
   useEffect(() => {
     if(data) {

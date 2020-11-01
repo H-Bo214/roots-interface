@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './NewRecipeForm.css';
 
-const NewRecipeForm = () => {
+const NewRecipeForm = ({ user, bookId }) => {
   const [author, setAuthor] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('')
   const [instructions, setInstructions] = useState('')
   const [ingredients, setIngredients] = useState([{ name: '', unit: '', measurement: 0,
   }])
-  
+
   const handleChange = (e, index) => {
     const values = [...ingredients]
     values[index][e.target.name] = e.target.value
@@ -82,6 +82,8 @@ const NewRecipeForm = () => {
 
   return (
     <div>
+      {console.log('user in NR', user)}
+      {console.log('bookId in NR', bookId)}
       <div className='NewRecipeForm'>
         <form className='add-recipe-form' onSubmit={handleSubmit}>
           <h1>Add a recipe</h1>

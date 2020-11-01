@@ -30,8 +30,8 @@ const BookTree = () => {
       />;
     });
 
-  const addNewBook = (title) => {
-    const newBooks = [...books, { title }];
+  const addNewBook = (title, id) => {
+    const newBooks = [...books, { title, id }];
     // const updatedUser = {
     //     name: user.name,
     //     userId: user.userId,
@@ -59,6 +59,7 @@ const BookTree = () => {
       <div className='user-cook-books'>
         <AddCookBook 
          addNewBook={addNewBook} 
+         userId={id}
         />
         {userCookBooks}
       </div>

@@ -46,13 +46,13 @@ const App = () => {
         <Route
           path='/recipe-book/:bookId'
           render={({ match }) => {
-            return <RecipeBook />;
+            return <RecipeBook  bookId={match.params.bookId} />;
           }}
         />
         <Route
           path='/add-recipe/:bookId'
           render={({ match }) => {
-            return <AddRecipe />;
+            return <AddRecipe user={user} bookId={match.params.bookId} />;
           }}
         />
         <Route

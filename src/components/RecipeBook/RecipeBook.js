@@ -4,7 +4,7 @@ import './RecipeBook.css';
 
 import { mockCookBook } from '../../mockData/mockData';
 
-const RecipeBook = (props) => {
+const RecipeBook = ( { bookId }) => {
   // make gql for the cookbook based on an id
   const listOfRecipes = mockCookBook.recipes.map((recipe) => {
     return (
@@ -25,7 +25,7 @@ const RecipeBook = (props) => {
             <p className='author'>Hosted by: {mockCookBook.author.userName}</p>
             <h3 className='right-page-title'>Recipes:</h3>
             <article className='recipe-list'>{listOfRecipes}</article>
-            <Link to={`/add-recipe/${mockCookBook.id}`}>
+            <Link to={`/add-recipe/${bookId}`}>
               <button>Add Recipe</button>
             </Link>
           </div>

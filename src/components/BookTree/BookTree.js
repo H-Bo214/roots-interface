@@ -8,16 +8,23 @@ import { GET_USER_COOKBOOKS } from '../../queries/Queries'
 import { Link } from 'react-router-dom'
 
 
-const BookTree = () => {
+
+const BookTree = ({ user }) => {
   // Get user would go first to get an id could be done on a app load as well
-  const id = '1'  // Will need to pass down the user id from App 
+  // Will need to pass down the user id from App 
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  // const id = user.id || '1'  NEED TO DEBUG THIS. WORKS WITH '1', BUT ERRORS WITH user.id. I think it's an async issue.
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  const id = user.id
   const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
     variables: {id},
   })
+
   const [books, setBooks] = useState([]);
 
-  useEffect(() => {
-    if(data){
+  useEffect (() => {
+    console.log('user id in BookTree useEffect', id)
+    if(data) {
       setBooks(data.getUserCookbooks)
     }
   }, [data]);
@@ -31,7 +38,9 @@ const BookTree = () => {
       </Link>
     });
 
+
   const addNewBook = (title, id) => {
+    console.log('id in addNewBook', id)
     const newBooks = [...books, { title, id }];
     // const updatedUser = {
     //     name: user.name,

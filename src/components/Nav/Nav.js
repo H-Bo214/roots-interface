@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import rootsLogo from '../../assets/roots-title-logo.jpg';
 import './Nav.css';
 
-const Nav = () => {
+const Nav = ( { user }) => {
   return (
     <nav>
       <Link to='/'>
         <img src={rootsLogo} alt='logo with word roots' className='rootslogo' />
       </Link>
-      {/* I will need to get the user name from the global state*/}
-      <h2 className='nav-username'>Horacio The Badass</h2>
+      <h2 className='nav-username'>{user.name}</h2>
     </nav>
   );
 };

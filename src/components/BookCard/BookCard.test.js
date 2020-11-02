@@ -21,10 +21,4 @@ describe('BookCard', () => {
     const h3 = screen.getByText(cookBookName)
     expect(h3).toBeInTheDocument()
   });
-
-  it('should render a book image', () => {
-    const img = screen.getByAltText('spiral book icon')
-    expect(img).toBeInTheDocument()
-  });
-
 });

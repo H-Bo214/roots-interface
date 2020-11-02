@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './SingleRecipe.css';
 import { useQuery } from '@apollo/client'
 import { GET_RECIPE } from '../../queries/Queries';

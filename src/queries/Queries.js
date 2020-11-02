@@ -35,6 +35,7 @@ export const GET_RECIPE = gql`
       title
     }
   }
+
 `;
 
 export const GET_COOKBOOK = gql`

@@ -18,3 +18,21 @@ export const GET_USER = gql`
     }
   }
 `;
+
+export const GET_RECIPE = gql`
+  query getRecipe($id: ID!) {
+    getRecipe(id: $id) {
+      author
+      description
+      id
+      ingredients {
+        amount
+        id
+        name
+        unit
+      } 
+      instructions
+      title
+    }
+  }
+`;

@@ -17,7 +17,6 @@ const NewRecipeForm = ({ user, bookId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('ingredients', ingredients)
   }
   
   const handleAddIngredient = (e) => {
@@ -82,8 +81,6 @@ const NewRecipeForm = ({ user, bookId }) => {
 
   return (
     <div>
-      {console.log('user in NR', user)}
-      {console.log('bookId in NR', bookId)}
       <div className='NewRecipeForm'>
         <form className='add-recipe-form' onSubmit={handleSubmit}>
           <h1>Add a recipe</h1>

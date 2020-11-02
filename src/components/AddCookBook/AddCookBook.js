@@ -4,7 +4,6 @@ import { gql, useMutation } from '@apollo/client'
 import { CREATE_COOKBOOK } from '../../queries/Mutations'
 
 const AddCookBook = ({ addNewBook, userId }) => {
-  console.log('userID in AddCookBook', userId)
   const [value, setValue] = useState('');
 
   const [createBook, { data }] = useMutation(CREATE_COOKBOOK)

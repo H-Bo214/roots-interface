@@ -52,7 +52,7 @@ const App = () => {
         <Route
           path='/single-recipe/:recipeId'
           render={({ match }) => {
-            return <SingleRecipe />;
+            return <SingleRecipe recipeId={match.params.recipeId}/>;
           }}
         />
         <Route 

@@ -14,7 +14,9 @@ const BookTree = ({ user }) => {
   // Will need to pass down the user id from App 
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   // NEED TO DEBUG THIS. WORKS WITH '1', BUT ERRORS WITH user.id. I think it's an async issue.
-  const id = user.id || '1'  
+
+  const id = user.id || '0'
+
   //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   // const id = user.id
   const {loading, error, data} = useQuery(GET_USER_COOKBOOKS, {
@@ -24,7 +26,6 @@ const BookTree = ({ user }) => {
   const [books, setBooks] = useState([]);
 
   useEffect (() => {
-    console.log('user id in BookTree useEffect', id)
     if(data) {
       setBooks(data.getUserCookbooks)
     }
@@ -41,7 +42,6 @@ const BookTree = ({ user }) => {
 
 
   const addNewBook = (title, id) => {
-    console.log('id in addNewBook', id)
     const newBooks = [...books, { title, id }];
     // const updatedUser = {
     //     name: user.name,

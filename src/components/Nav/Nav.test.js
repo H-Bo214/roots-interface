@@ -4,10 +4,13 @@ import { screen, render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 describe('Header Component', () => {
+  let name = 'Joe'
   it('Should have the correct content when rendered', () => {
     render(
       <MemoryRouter>
-        <Nav />
+        <Nav 
+          user={name}
+        />
       </MemoryRouter>
     );
 

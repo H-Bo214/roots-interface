@@ -14,7 +14,7 @@ describe('BookTree', () => {
         request: {
           query: GET_USER_COOKBOOKS,
           variables: {
-            id: '1',
+            id: '0',
           },
         },
         result: {
@@ -35,10 +35,15 @@ describe('BookTree', () => {
     ]
   })
   it('should render with while loading', () => {
+    let name = 'Joe'
+    let id = '0'
     render(
       <MemoryRouter>
         <MockedProvider mocks={mocks}>
-          <BookTree/>
+          <BookTree
+            user={name}
+            id={id}
+          />
         </MockedProvider>
       </MemoryRouter>
     );
@@ -49,10 +54,15 @@ describe('BookTree', () => {
   });
 
   it('should render correctly after loading', async () => {
+    let name = 'Joe'
+    let id = '0'
     render(
       <MemoryRouter>
         <MockedProvider mocks={mocks}>
-          <BookTree/>
+          <BookTree
+            user={name}
+            id={id}
+          />
         </MockedProvider>
       </MemoryRouter>
     );

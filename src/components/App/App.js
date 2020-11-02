@@ -15,16 +15,16 @@ const App = () => {
   const id = '1' 
   const { loading, error, data } = useQuery(GET_USER, { variables: {id} })
 
-  let [user, setUser] = useState({ email: '', id: '', name: '' })
+  const [user, setUser] = useState({ email: '', id: '', name: '' })
 
   useEffect(() => {
     if(data) {
-      user = {
+      let foundUser = {
         email: data.getUser.email,
         id: data.getUser.id,
         name: data.getUser.name,
       }
-      setUser(user)
+      setUser(foundUser)
     }
   }, [data])
 

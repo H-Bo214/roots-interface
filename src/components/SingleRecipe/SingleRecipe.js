@@ -1,33 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './SingleRecipe.css';
+import { useQuery } from '@apollo/client'
+import { GET_RECIPE } from '../../queries/Queries';
 
-import { mockRecipe } from '../../mockData/mockData';
+const SingleRecipe = ({recipeId}) => {
+  const {loading, error, data} = useQuery(GET_RECIPE, {
+    variables: { id: recipeId },
+  })
 
-const SingleRecipe = () => {
-  // get the recipe from the server by id
-
-  //map over ingredients
-  const recipeIngredients = mockRecipe.ingredients.map((ingredient) => {
+  // map over ingredients
+  let recipeIngredients;
+  if(data) recipeIngredients = data.getRecipe.ingredients.map((ingredient) => {
     return (
-      <li>
-        {ingredient.measurement} {ingredient.unit} {ingredient.name}
+      <li key={ingredient.id}>
+        {ingredient.amount} {ingredient.unit} {ingredient.name}
       </li>
     );
   });
+
+  if(loading) return <h1>Loading...</h1>;
+  if(error) {
+    console.log(error);
+    return <h1>error</h1>;
+  }
 
   return (
     <div className='recipe-page-background'>
       <div className='recipe-page-paper'>
         <article className='recipe-page-content'>
           <div className='recipe-text'>
-            <h1>{mockRecipe.recipeName}</h1>
+            <h1>{data.getRecipe.title}</h1>
             <br></br>
-            <p>{mockRecipe.recipeAuthor}</p>
-            <p>{mockRecipe.description}</p>
+            <p>{data.getRecipe.author}</p>
+            <p>{data.getRecipe.description}</p>
             <br></br>
             {recipeIngredients}
             <br></br>
-            <p className='recipe-instructions'>{mockRecipe.instructions}</p>
+            <p className='recipe-instructions'>{data.getRecipe.instructions}</p>
           </div>
         </article>
       </div>

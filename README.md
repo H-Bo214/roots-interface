@@ -1,4 +1,3 @@
-# Leomund's Superhut
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -27,16 +26,16 @@ The site was created for a school project that had the designers design an MVP w
 
 ## How to use
 
-* On load the application will act as a user has already logged in. The project restricted the addition of authentication to fucus on user story and experience. The landing page will have simple navigation showing all of the users owned cookbooks gathered from their data. There is also a location for the user to add new cookbooks to their collection. 
+* On load the application will act as a user has already logged in. The project restricted the addition of authentication to focus on the user story and experience. The landing page will have simple navigation showing all of the users owned cookbooks gathered from their data. There is also a location for the user to add new cookbooks to their collection. 
 * Selecting a cookbook will navigate you to a page where you can view the recipes associated to that cookbook as well as the title and owner. This page will act as navigation to each of the recipes and a page where they can add new recipes. In the future we will add an area for a user to add family members that they want to associate with the book. This could be expanded further after authentication to allow the added family members to have their own accounts and the ability to edit the cookbook.
-* Selecting a recipe from the cookbook will take the user to a simple page that displays the infromation from the recipe inlcuding author, description, ingredients and instructions.
-* From the cookbook selecting the add recipe will take the user to a page form that allows the user to input a new recipe by filling out feilds for the details.
+* Selecting a recipe from the cookbook will take the user to a simple page that displays the information from the recipe including author, description, ingredients and instructions.
+* From the cookbook selecting the add recipe will take the user to a page form that allows the user to input a new recipe by filling out fields for the details.
 
 ## Built With
 
 - React 16
 - CSS
-- Apollo
+- Apollo client
 - GraphQl
 - Heroku
 - Travis CI
@@ -45,14 +44,16 @@ The site was created for a school project that had the designers design an MVP w
 
 The full project can be found [Here](https://github.com/roots-capstone) and its [combined project board](https://github.com/orgs/roots-capstone/projects/1) where the status of future and completed features is tracked.   
 Collaboration with the BE lead us to create a [GIST](https://gist.github.com/neeruram1/f02a12c6da50da3520f797a72ec53f14) to keep a current vision of the data flow, mutations, and queries.
+Wire frames and component structure are located [here](https://miro.com/app/board/o9J_khtAok8=/)
+
 
 ### Wins
 
-The Styling of many of the components evovled as we met and presented with the BE group to become a plesant UX.
+The Styling of many of the components evolved as we met and presented with the BE group to become a pleasant UX.
 
 ### Struggles
 
-Learning graphQL and appollo lead us to spend a fair amount of time researching all of the capabilities of it. The cache proved challenging to understand in its early stages.
+Learning graphQL and apollo lead us to spend a fair amount of time researching all of its features. The cache proved challenging to understand in its early stages. Getting our quires and mutations to function properly took some effort to accomplish as well. 
 
 ## Installation
 

@@ -2,7 +2,7 @@
   font-family: Standard;
   background: url(../../assets//root-b-w.jpg);
   background-size: cover;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .user-cook-books {
@@ -10,6 +10,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px 0px;
   justify-items: center;
+  height: 68vh;
+  overflow-y: scroll;
 }
 
 .user-icon-container {
@@ -25,13 +27,16 @@
   padding-top: 0;
 }
 
+.user-cook-books a:link {
+  text-decoration: none;
+}
+
 /* colors */
 /* dark - #38373F
 dark green - #4E615D
 light green  - #8A9D88
 tan - #E0D3C4 */
 /* lighter tan - #fcf0e1 */
-
 
 /* fonts */
 /* font-family: 'Old Standard TT', serif;

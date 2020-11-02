@@ -35,4 +35,19 @@ export const GET_RECIPE = gql`
       title
     }
   }
+
+`;
+
+export const GET_COOKBOOK = gql`
+  query getCookbook($id: ID!) {
+    getCookbook(id: $id) {
+      author
+      id
+      title
+      recipes {
+        title
+        id
+      }
+    }
+  }
 `;

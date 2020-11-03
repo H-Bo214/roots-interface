@@ -128,33 +128,33 @@ describe('NewRecipeForm', () => {
     expect(measurement.value).toBe('1');
   });
 
-  // it('should allow a user to add additional ingredient fields', () => {
-  //   render(
-  //     <MemoryRouter>
-  //       <MockedProvider mocks={mocks}>
-  //         <NewRecipeForm user={{}} bookId="1" />
-  //       </MockedProvider>
-  //     </MemoryRouter>,
-  //   );
+  it('should allow a user to add additional ingredient fields', () => {
+    render(
+      <MemoryRouter>
+        <MockedProvider mocks={mocks}>
+          <NewRecipeForm user={{}} bookId="1" />
+        </MockedProvider>
+      </MemoryRouter>,
+    );
 
-  //   const addAdditionalIngredientButton = screen.getByRole('button', {
-  //     name: 'Ingredient +',
-  //   });
+    const addAdditionalIngredientButton = screen.getByRole('button', {
+      name: 'Ingredient +',
+    });
 
-  //   fireEvent.click(addAdditionalIngredientButton);
+    fireEvent.click(addAdditionalIngredientButton);
 
-  //   const ingredientLabels = screen.getAllByText('Ingredient:');
-  //   const ingredientNames = screen.getAllByPlaceholderText('Ingredient name');
-  //   const unitLabels = screen.getAllByText('Unit:');
-  //   const units = screen.getAllByPlaceholderText('Unit');
-  //   const measurementLabels = screen.getAllByText('Measurement:');
-  //   const measurements = screen.getAllByPlaceholderText('Measurement');
+    const ingredientLabels = screen.getAllByText('Ingredient:');
+    const ingredientNames = screen.getAllByPlaceholderText('Ingredient name');
+    const unitLabels = screen.getAllByText('Unit:');
+    const units = screen.getAllByPlaceholderText('Unit');
+    const measurementLabels = screen.getAllByText('Measurement:');
+    const measurements = screen.getAllByPlaceholderText('Measurement');
 
-  //   expect(ingredientNames.length).toEqual(2);
-  //   expect(ingredientLabels.length).toEqual(2);
-  //   expect(units.length).toEqual(2);
-  //   expect(unitLabels.length).toEqual(2);
-  //   expect(measurements.length).toEqual(2);
-  //   expect(measurementLabels.length).toEqual(2);
-  // });
+    expect(ingredientNames.length).toEqual(2);
+    expect(ingredientLabels.length).toEqual(2);
+    expect(units.length).toEqual(2);
+    expect(unitLabels.length).toEqual(2);
+    expect(measurements.length).toEqual(2);
+    expect(measurementLabels.length).toEqual(2);
+  });
 });

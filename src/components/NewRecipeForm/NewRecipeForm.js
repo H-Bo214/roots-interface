@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './NewRecipeForm.css';
+// import { useMutation } from '@apollo/client';
+// import { CREATE_RECIPE } from '../../queries/Mutations';
 
 const NewRecipeForm = ({ user, bookId }) => {
   const [author, setAuthor] = useState('');
@@ -9,6 +11,7 @@ const NewRecipeForm = ({ user, bookId }) => {
   const [ingredients, setIngredients] = useState([
     { name: '', unit: '', measurement: 0 },
   ]);
+  // const [createRecipe] = useMutation(CREATE_RECIPE);
 
   const handleChange = (e, index) => {
     const values = [...ingredients];
@@ -18,6 +21,10 @@ const NewRecipeForm = ({ user, bookId }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    // createRecipe({
+    //   variables: { description, instructions, title: name, author, ingredients, cookbookId: bookId },
+    // });
+    // // take user back to recipe page or clear form???????
   };
 
   const handleAddIngredient = e => {

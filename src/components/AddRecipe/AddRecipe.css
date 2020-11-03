@@ -1,7 +1,7 @@
 .AddRecipe {
-	display: flex;
-	justify-content: center;
-	background: url(../../assets/root-b-w.jpg);
-	background-size: cover;
-	opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  background: url(../../assets/root-b-w.jpg);
+  background-size: cover;
+  opacity: 0.8;
 }

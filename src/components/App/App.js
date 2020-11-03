@@ -36,6 +36,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {console.log('data', data)}
       <Switch>
         <Route
           path="/recipe-book/:bookId"

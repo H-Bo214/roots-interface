@@ -26,13 +26,13 @@ describe('NewRecipeForm', () => {
         result: () => {
           addRecipeCalled = true;
           return {
-          data: {
-            createCookbook: {
-              id: '1',
+            data: {
+              createCookbook: {
+                id: '1',
+              },
             },
-          },
+          };
         },
-      }
       },
     ];
   });

@@ -1,8 +1,8 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client';
 
 export const GET_USER_COOKBOOKS = gql`
   query getUserCookbooks($id: ID!) {
-    getUserCookbooks(id: $id){
+    getUserCookbooks(id: $id) {
       id
       title
     }
@@ -30,12 +30,11 @@ export const GET_RECIPE = gql`
         id
         name
         unit
-      } 
+      }
       instructions
       title
     }
   }
-
 `;
 
 export const GET_COOKBOOK = gql`

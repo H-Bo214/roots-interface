@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import './App.css';
 import Nav from '../Nav/Nav';
 import BookTree from '../BookTree/BookTree';
 import RecipeBook from '../RecipeBook/RecipeBook';
 import SingleRecipe from '../SingleRecipe/SingleRecipe';
-import { useQuery } from '@apollo/client';
-import './App.css';
 import AddRecipe from '../AddRecipe/AddRecipe';
+import { useQuery } from '@apollo/client';
 import { GET_USER } from '../../queries/Queries';
 
 const App = () => {

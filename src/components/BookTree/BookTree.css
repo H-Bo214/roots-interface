@@ -1,6 +1,6 @@
 .BookTree {
   font-family: Standard;
-  background: url(../../assets//root-b-w.jpg);
+  background: url(../../assets/root-b-w.jpg);
   background-size: cover;
   opacity: 0.8;
 }
@@ -30,14 +30,3 @@
 .user-cook-books a:link {
   text-decoration: none;
 }
-
-/* colors */
-/* dark - #38373F
-dark green - #4E615D
-light green  - #8A9D88
-tan - #E0D3C4 */
-/* lighter tan - #fcf0e1 */
-
-/* fonts */
-/* font-family: 'Old Standard TT', serif;
-font-family: 'Ubuntu', sans-serif; */

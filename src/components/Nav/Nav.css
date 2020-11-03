@@ -1,22 +1,22 @@
 .rootslogo {
-	width: 12vw;
-	margin: 3vw;
-	border-radius: 25%;
-	box-shadow: 10px 10px 20px 10px rgba(149, 167, 146, 0.54);
-	transition: transform 0.3s;
+  width: 12vw;
+  margin: 3vw;
+  border-radius: 25%;
+  box-shadow: 10px 10px 20px 10px rgba(149, 167, 146, 0.54);
+  transition: transform 0.3s;
 }
 
 .rootslogo:hover {
-	transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 nav {
-	text-align: center;
-	padding: 0 1vw;
+  text-align: center;
+  padding: 0 1vw;
 }
 
 .nav-username {
-	background-color: #e3d9ca;
-	padding: 0 1em;
-	border-radius: 1em;
+  background-color: #e3d9ca;
+  padding: 0 1em;
+  border-radius: 1em;
 }

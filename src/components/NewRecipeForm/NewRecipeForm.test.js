@@ -157,4 +157,40 @@ describe('NewRecipeForm', () => {
     expect(measurements.length).toEqual(2);
     expect(measurementLabels.length).toEqual(2);
   });
+
+  it('should allow a user to remove ingredient fields', () => {
+    render(
+      <MemoryRouter>
+        <MockedProvider mocks={mocks}>
+          <NewRecipeForm user={{}} bookId="1" />
+        </MockedProvider>
+      </MemoryRouter>,
+    );
+
+    const addAdditionalIngredientButton = screen.getByRole('button', {
+      name: 'Ingredient +',
+    });
+    const removeIngredientFieldButton = screen.getByRole('button', {
+      name: 'Ingredient -',
+    });
+
+    fireEvent.click(addAdditionalIngredientButton);
+    fireEvent.click(addAdditionalIngredientButton);
+    fireEvent.click(addAdditionalIngredientButton);
+    fireEvent.click(removeIngredientFieldButton);
+
+    const ingredientLabels = screen.getAllByText('Ingredient:');
+    const ingredientNames = screen.getAllByPlaceholderText('Ingredient name');
+    const unitLabels = screen.getAllByText('Unit:');
+    const units = screen.getAllByPlaceholderText('Unit');
+    const measurementLabels = screen.getAllByText('Measurement:');
+    const measurements = screen.getAllByPlaceholderText('Measurement');
+
+    expect(ingredientNames.length).toEqual(3);
+    expect(ingredientLabels.length).toEqual(3);
+    expect(units.length).toEqual(3);
+    expect(unitLabels.length).toEqual(3);
+    expect(measurements.length).toEqual(3);
+    expect(measurementLabels.length).toEqual(3);
+  });
 });

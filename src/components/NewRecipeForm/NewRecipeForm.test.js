@@ -8,6 +8,7 @@ import { CREATE_RECIPE } from '../../queries/Mutations';
 
 describe('NewRecipeForm', () => {
   let mocks;
+  let addRecipeCalled = false;
   beforeEach(() => {
     mocks = [
       {
@@ -22,13 +23,16 @@ describe('NewRecipeForm', () => {
             cookbookId: '1',
           },
         },
-        result: {
+        result: () => {
+          addRecipeCalled = true;
+          return {
           data: {
             createCookbook: {
               id: '1',
             },
           },
         },
+      }
       },
     ];
   });
@@ -193,4 +197,45 @@ describe('NewRecipeForm', () => {
     expect(measurements.length).toEqual(3);
     expect(measurementLabels.length).toEqual(3);
   });
+
+  // it('should allow a user to submit a recipe after filling out all fields', () => {
+  //   render(
+  //     <MemoryRouter>
+  //       <MockedProvider mocks={mocks}>
+  //         <NewRecipeForm user={{}} bookId="1" />
+  //       </MockedProvider>
+  //     </MemoryRouter>,
+  //   );
+
+  //   const recipeAuthor = screen.getByPlaceholderText('Recipe author');
+  //   const recipeName = screen.getByPlaceholderText('Recipe name');
+  //   const recipeDescription = screen.getByPlaceholderText('Recipe description');
+  //   const recipeInstructions = screen.getByPlaceholderText(
+  //     'Recipe instructions',
+  //   );
+  //   const ingredientName = screen.getByPlaceholderText('Ingredient name');
+  //   const unit = screen.getByPlaceholderText('Unit');
+  //   const measurement = screen.getByPlaceholderText('Measurement');
+  //   const submitButton = screen.getByRole('button', {
+  //     name: 'Add to my recipe book',
+  //   });
+
+  //   expect(addRecipeCalled).toBe(false)
+
+  //   fireEvent.change(recipeAuthor, { target: { value: 'recipe author' } });
+  //   fireEvent.change(recipeName, { target: { value: 'recipe title' } });
+  //   fireEvent.change(recipeDescription, {
+  //     target: { value: 'recipe description' },
+  //   });
+  //   fireEvent.change(recipeInstructions, {
+  //     target: { value: 'recipe instructions' },
+  //   });
+  //   fireEvent.change(ingredientName, { target: { value: 'flour' } });
+  //   fireEvent.change(unit, { target: { value: 'cup' } });
+  //   fireEvent.change(measurement, { target: { value: '1' } });
+  //   fireEvent.click(submitButton);
+
+  //   await new Promise(resolve => setTimeout(resolve, 0)); // wait for response
+  //   expect(addRecipeCalled).toBe(true)
+  // });
 });

@@ -7,3 +7,25 @@ export const CREATE_COOKBOOK = gql`
     }
   }
 `;
+
+export const CREATE_RECIPE = gql`
+  mutation createRecipe(
+    $description: String!
+    $instructions: String!
+    $title: String!
+    $author: String!
+    $cookbookId: ID!
+    $ingredients: Object!
+  ) {
+    createCookbook(
+      description: $description
+      instructions: $instructions
+      title: $title
+      author: $author
+      cookbookId: $cookbookId
+      ingredients: $ingredients
+    ) {
+      id
+    }
+  }
+`;

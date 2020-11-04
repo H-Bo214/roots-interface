@@ -10,7 +10,7 @@ import { useQuery } from '@apollo/client';
 import { GET_USER } from '../../queries/Queries';
 
 const App = () => {
-  const id = '6';
+  const id = '14';
   const { loading, error, data } = useQuery(GET_USER, { variables: { id } });
 
   const [user, setUser] = useState({ email: '', id: '', name: '' });

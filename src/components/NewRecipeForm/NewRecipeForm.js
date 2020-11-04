@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './NewRecipeForm.css';
 import { useMutation } from '@apollo/client';
 import { CREATE_RECIPE, CREATE_INGREDIENT } from '../../queries/Mutations';
+import { useHistory } from 'react-router-dom';
 
 const NewRecipeForm = ({ user, bookId }) => {
+  const history = useHistory()
   const [author, setAuthor] = useState('recipe author');
   const [name, setName] = useState('recipe title');
   const [description, setDescription] = useState('recipe description');
@@ -34,14 +36,10 @@ const NewRecipeForm = ({ user, bookId }) => {
         cookbookId: bookId,
       },
     }).catch(err => console.log(err));
-    // console.log('loading', loading);
-    // console.log('error', error);
-    // console.log('createRecipeData', createRecipeData);
-    console.log(res);
 
     createAllIngredients(res.data.createRecipe.id);
 
-    // // take user back to recipe page or clear form???????
+    history.push(`/recipe-book/${bookId}`)
   };
 
   const createAllIngredients = id => {
@@ -186,25 +184,3 @@ const NewRecipeForm = ({ user, bookId }) => {
 };
 
 export default NewRecipeForm;
-
-// Will need to send a mutation request to BE to add/create a new recipe  // Endpoint name createRecipe //
-// format//
-//      {
-//  cookbookID: 'string',
-//  recipeName: 'string',
-//  recipeAuthor: 'string',
-//  description: 'sting', /* option to be empty*/
-//  instructions: 'string',
-//  ingredients: [
-//    {
-//      name: 'sting',
-//      unit: 'sting', /* option to be empty*/
-//      measurement: 0,
-//    },
-//    {
-//      name: 'sting',
-//      unit: 'sting', /* option to be empty*/
-//      measurement: 0,
-//    },
-//  ]
-// }

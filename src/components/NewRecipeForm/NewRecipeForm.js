@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './NewRecipeForm.css';
 import { useMutation } from '@apollo/client';
-import { CREATE_RECIPE } from '../../queries/Mutations';
-import { CREATE_INGREDIENT}
+import { CREATE_RECIPE, CREATE_INGREDIENT } from '../../queries/Mutations';
 
 const NewRecipeForm = ({ user, bookId }) => {
   const [author, setAuthor] = useState('');
@@ -12,7 +11,10 @@ const NewRecipeForm = ({ user, bookId }) => {
   const [ingredients, setIngredients] = useState([
     { name: '', unit: '', measurement: 0 },
   ]);
-  const [createRecipe, {loading, error, data: createRecipeData}] = useMutation(CREATE_RECIPE);
+  const [
+    createRecipe,
+    { loading, error, data: createRecipeData },
+  ] = useMutation(CREATE_RECIPE);
   const [createIngredient] = useMutation(CREATE_INGREDIENT);
 
   const handleChange = (e, index) => {
@@ -24,7 +26,14 @@ const NewRecipeForm = ({ user, bookId }) => {
   const handleSubmit = e => {
     e.preventDefault();
     createRecipe({
-      variables: { description, instructions, title: name, author, cookbookId: bookId}});
+      variables: {
+        description,
+        instructions,
+        title: name,
+        author,
+        cookbookId: bookId,
+      },
+    });
     createAllIngredients(createRecipeData.createRecipe.id);
     // // take user back to recipe page or clear form???????
   };
@@ -32,10 +41,15 @@ const NewRecipeForm = ({ user, bookId }) => {
   const createAllIngredients = id => {
     ingredients.map(ingredient => {
       createIngredient({
-        variables: {amount: ingredient.measurement, name: ingredient.name, recipeId: id, unit: ingredient.unit}
-      })
-    })
-  }
+        variables: {
+          amount: ingredient.measurement,
+          name: ingredient.name,
+          recipeId: id,
+          unit: ingredient.unit,
+        },
+      });
+    });
+  };
 
   const handleAddIngredient = e => {
     setIngredients([

@@ -71,11 +71,7 @@ describe('AddCookBook', () => {
     render(
       <MemoryRouter>
         <MockedProvider mocks={mocks}>
-          <AddCookBook 
-            addNewBook={addNewBook} 
-            userId="1" 
-            userName="Tyler"
-          />
+          <AddCookBook addNewBook={addNewBook} userId="1" userName="Tyler" />
         </MockedProvider>
       </MemoryRouter>,
     );
@@ -92,7 +88,9 @@ describe('AddCookBook', () => {
 
     fireEvent.click(button[0]);
 
-    await new Promise(resolve => setTimeout(resolve, 0)); // wait for response
+    await new Promise(resolve => setTimeout(resolve, 0)).catch(err =>
+      console.log(err),
+    ); // wait for response
     expect(addNewBook).toHaveBeenCalledTimes(1);
     expect(addNewBook).toHaveBeenCalledWith('Creator family cookbook', '1');
   });

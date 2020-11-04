@@ -1,30 +1,38 @@
 import React from 'react';
-import { render, screen, fireEvent, findByTestId, waitFor, findByText } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  findByTestId,
+  waitFor,
+  findByText,
+} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from '../App/App';
 import { MemoryRouter } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
-import { GET_USER, GET_USER_COOKBOOKS} from '../../queries/Queries';
+import { GET_USER, GET_USER_COOKBOOKS } from '../../queries/Queries';
 
-const waitForData = () => new Promise(res => setTimeout(res, 0))
+const waitForData = () =>
+  new Promise(res => setTimeout(res, 0)).catch(err => console.log(err));
 
 describe('App', () => {
-  let mockUser, mockGetCookbooks
+  let mockUser, mockGetCookbooks;
   beforeEach(() => {
     mockUser = [
       {
         request: {
           query: GET_USER,
           variables: {
-            id: '6'
+            id: '6',
           },
         },
         result: {
           data: {
             getUser: {
-              email: "tyler@creatorFam.com",
-              id: "6",
-              name: "Tyler",
+              email: 'tyler@creatorFam.com',
+              id: '6',
+              name: 'Tyler',
             },
           },
         },
@@ -58,7 +66,7 @@ describe('App', () => {
   ];
 
   it('should render loading state initially', async () => {
-    await waitForData()
+    await waitForData();
     render(
       <MemoryRouter>
         <MockedProvider mocks={mockUser}>
@@ -70,5 +78,4 @@ describe('App', () => {
     const loading = screen.getByText('Loading...');
     expect(loading).toBeInTheDocument();
   });
-  
 });

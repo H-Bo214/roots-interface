@@ -12,49 +12,49 @@ describe('NewRecipeForm', () => {
   let addIngredientCalled = false;
   beforeEach(() => {
     mocks = [
-      {
-        request: {
-          query: CREATE_RECIPE,
-          variables: {
-            description: 'recipe description',
-            instructions: 'recipe instructions',
-            title: 'recipe title',
-            author: 'recipe author',
-            cookbookId: '1',
-          },
-        },
-        result: () => {
-          addRecipeCalled = true;
-          return {
-            data: {
-              createRecipe: {
-                id: '1',
-              },
-            },
-          };
-        },
-      },
-      {
-        request: {
-          query: CREATE_INGREDIENT,
-          variables: {
-            amount: '1',
-            name: 'flour',
-            recipeId: '1',
-            unit: 'cup',
-          },
-        },
-        result: () => {
-          addIngredientCalled = true;
-          return {
-            data: {
-              createIngredient: {
-                id: '1',
-              },
-            },
-          };
-        },
-      },
+      // {
+      //   request: {
+      //     query: CREATE_RECIPE,
+      //     variables: {
+      //       description: 'recipe description',
+      //       instructions: 'recipe instructions',
+      //       title: 'recipe title',
+      //       author: 'recipe author',
+      //       cookbookId: '1',
+      //     },
+      //   },
+      //   result: () => {
+      //     addRecipeCalled = true;
+      //     return {
+      //       data: {
+      //         createRecipe: {
+      //           id: '1',
+      //         },
+      //       },
+      //     };
+      //   },
+      // },
+      // {
+      //   request: {
+      //     query: CREATE_INGREDIENT,
+      //     variables: {
+      //       amount: '1',
+      //       name: 'flour',
+      //       recipeId: '1',
+      //       unit: 'cup',
+      //     },
+      //   },
+      //   result: () => {
+      //     addIngredientCalled = true;
+      //     return {
+      //       data: {
+      //         createIngredient: {
+      //           id: '1',
+      //         },
+      //       },
+      //     };
+      //   },
+      // },
     ];
   });
   it('should render all components of the page', () => {

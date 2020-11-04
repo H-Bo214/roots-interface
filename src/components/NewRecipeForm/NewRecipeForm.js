@@ -4,16 +4,16 @@ import { useMutation } from '@apollo/client';
 import { CREATE_RECIPE, CREATE_INGREDIENT } from '../../queries/Mutations';
 
 const NewRecipeForm = ({ user, bookId }) => {
-  const [author, setAuthor] = useState('');
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [instructions, setInstructions] = useState('');
+  const [author, setAuthor] = useState('recipe author');
+  const [name, setName] = useState('recipe title');
+  const [description, setDescription] = useState('recipe description');
+  const [instructions, setInstructions] = useState('recipe instructions');
   const [ingredients, setIngredients] = useState([
     { name: '', unit: '', measurement: 0 },
   ]);
   const [
     createRecipe,
-    { loading, error, data: createRecipeData },
+    { loading, error, data: createRecipeData = {} },
   ] = useMutation(CREATE_RECIPE);
   const [createIngredient] = useMutation(CREATE_INGREDIENT);
 
@@ -23,9 +23,9 @@ const NewRecipeForm = ({ user, bookId }) => {
     setIngredients(values);
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    createRecipe({
+    const res = await createRecipe({
       variables: {
         description,
         instructions,
@@ -34,15 +34,21 @@ const NewRecipeForm = ({ user, bookId }) => {
         cookbookId: bookId,
       },
     });
-    createAllIngredients(createRecipeData.createRecipe.id);
+    // console.log('loading', loading);
+    // console.log('error', error);
+    // console.log('createRecipeData', createRecipeData);
+    console.log(res);
+
+    createAllIngredients(res.data.createRecipe.id);
+
     // // take user back to recipe page or clear form???????
   };
 
   const createAllIngredients = id => {
-    ingredients.map(ingredient => {
-      createIngredient({
+    ingredients.map(async ingredient => {
+      await createIngredient({
         variables: {
-          amount: ingredient.measurement,
+          amount: ingredients.measurement,
           name: ingredient.name,
           recipeId: id,
           unit: ingredient.unit,

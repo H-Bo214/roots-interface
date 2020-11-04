@@ -16,7 +16,7 @@ describe('AddCookBook', () => {
           query: CREATE_COOKBOOK,
           variables: {
             userId: '1',
-            author: 'Will be removed',
+            author: 'Tyler',
             title: 'Creator family cookbook',
           },
         },
@@ -71,7 +71,11 @@ describe('AddCookBook', () => {
     render(
       <MemoryRouter>
         <MockedProvider mocks={mocks}>
-          <AddCookBook addNewBook={addNewBook} userId="1" />
+          <AddCookBook 
+            addNewBook={addNewBook} 
+            userId="1" 
+            userName="Tyler"
+          />
         </MockedProvider>
       </MemoryRouter>,
     );

@@ -10,7 +10,7 @@ import { useQuery } from '@apollo/client';
 import { GET_USER } from '../../queries/Queries';
 
 const App = () => {
-  const id = '1';
+  const id = '6';
   const { loading, error, data } = useQuery(GET_USER, { variables: { id } });
 
   const [user, setUser] = useState({ email: '', id: '', name: '' });
@@ -36,6 +36,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {console.log('data', data)}
       <Switch>
         <Route
           path="/recipe-book/:bookId"

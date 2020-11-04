@@ -16,7 +16,7 @@ export const CREATE_RECIPE = gql`
     $author: String!
     $cookbookId: ID!
   ) {
-    createCookbook(
+    createRecipe(
       description: $description
       instructions: $instructions
       title: $title
@@ -30,12 +30,17 @@ export const CREATE_RECIPE = gql`
 
 export const CREATE_INGREDIENT = gql`
   mutation createIngredient(
-    $amount: Float!
+    $amount: String!
     $name: String!
     $recipeId: ID!
     $unit: String!
   ) {
-    createCookbook(amount: amount, name: name, recipeId: recipeId, unit: unit) {
+    createIngredient(
+      amount: $amount
+      name: $name
+      recipeId: $recipeId
+      unit: $unit
+    ) {
       id
     }
   }

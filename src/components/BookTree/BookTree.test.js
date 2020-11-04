@@ -60,14 +60,10 @@ describe('BookTree', () => {
       </MemoryRouter>,
     );
 
-    const userIcon = await waitFor(() => screen.getByAltText('user icon'));
-    const addCookBookButton = screen.getByRole('button', {
-      name: 'Add to cookbooks',
-    });
+    const addCookBookButton = await waitFor(() => screen.getByRole('button', {name: 'Add to cookbooks'}))
     const cookbookOne = screen.getByText("Neeru's Cookbook");
     const cookbookTwo = screen.getByText('Indian Food');
 
-    expect(userIcon).toBeInTheDocument();
     expect(addCookBookButton).toBeInTheDocument();
     expect(cookbookOne).toBeInTheDocument();
     expect(cookbookTwo).toBeInTheDocument();

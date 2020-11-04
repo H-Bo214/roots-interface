@@ -8,16 +8,18 @@
   font-size: 20px;
   background-color: #e3d9ca;
   text-align: center;
+  width: 27em;
+  margin-left: 33%;
+  margin-bottom: 1em;
 }
 
 .cookbook-form input {
   padding: 0.7em;
-  margin-bottom: 2em;
+  margin: 20px auto;
   font-size: 16px;
 }
 
 .cookbook-form button {
-  color: white;
   border-radius: 3px;
   background-color: #fff;
   font-size: 1.2em;
@@ -31,4 +33,9 @@
 
 .cookbook-form button:hover {
   transform: scale(1.02);
+}
+
+.cookbook-form-child {
+  width: 25em;
+  display: flex;
 }

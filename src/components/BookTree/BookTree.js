@@ -3,7 +3,6 @@ import { useQuery } from '@apollo/client';
 import './BookTree.css';
 import BookCard from '../BookCard/BookCard';
 import AddCookBook from '../AddCookBook/AddCookBook';
-import userIcon from '../../assets/tan-user-icon.svg';
 import { GET_USER_COOKBOOKS } from '../../queries/Queries';
 import { Link } from 'react-router-dom';
 
@@ -42,11 +41,12 @@ const BookTree = ({ user }) => {
 
   return (
     <section className="BookTree">
-      <div className="user-icon-container">
-        <img src={userIcon} alt="user icon" className="user-img" />
-      </div>
+        <AddCookBook 
+          addNewBook={addNewBook} 
+          userId={id} 
+          userName={user.name}
+        />
       <div className="user-cook-books">
-        <AddCookBook addNewBook={addNewBook} userId={id} />
         {userCookBooks}
       </div>
     </section>

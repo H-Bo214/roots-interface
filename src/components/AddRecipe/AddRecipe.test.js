@@ -3,12 +3,15 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AddRecipe from './AddRecipe';
 import { MemoryRouter } from 'react-router-dom';
+import { MockedProvider } from '@apollo/client/testing';
 
 describe('AddRecipe', () => {
   it('should render the basic areas of the container', () => {
     render(
       <MemoryRouter>
-        <AddRecipe />
+        <MockedProvider>
+          <AddRecipe />
+        </MockedProvider>
       </MemoryRouter>,
     );
 

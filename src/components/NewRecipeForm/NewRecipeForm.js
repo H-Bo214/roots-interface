@@ -33,7 +33,7 @@ const NewRecipeForm = ({ user, bookId }) => {
         author,
         cookbookId: bookId,
       },
-    });
+    }).catch(err => console.log(err));
     // console.log('loading', loading);
     // console.log('error', error);
     // console.log('createRecipeData', createRecipeData);
@@ -53,7 +53,7 @@ const NewRecipeForm = ({ user, bookId }) => {
           recipeId: id,
           unit: ingredient.unit,
         },
-      });
+      }).catch(err => console.log(err));
     });
   };
 

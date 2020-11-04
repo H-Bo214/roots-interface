@@ -44,6 +44,7 @@ describe('Single Recipe', () => {
       },
     ];
   });
+  
   it('should render with loading while loading', () => {
     render(
       <MemoryRouter>

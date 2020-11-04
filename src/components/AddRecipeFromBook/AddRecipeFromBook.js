@@ -1,6 +1,8 @@
 // import React from 'react'
 // import '../AddRecipeFromBook/AddRecipeFromBook.css'
-// /// This component is for future improvements. A user will be able to choose another family member's book and add a recipe from that book. Will require conditional rendering, choose book first, then render the recipe drop down.
+
+// This component is for future improvements. A user will be able to choose another family member's book and add a recipe from that book. Will require conditional rendering, choose book first, then render the recipe drop down.
+
 // const AddRecipeFromBook = () => {
 //   return (
 //     <form className='book-form'>

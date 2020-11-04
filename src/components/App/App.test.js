@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  render,
-  screen,
-  fireEvent,
-  findByTestId,
-  waitFor,
-  findByText,
-} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from '../App/App';
 import { MemoryRouter } from 'react-router-dom';

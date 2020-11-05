@@ -82,14 +82,14 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 
 ### Recipe Book, Navigating to a Recipe, Navigating to the add form
 ![Navigating to an existing recipe](https://media.giphy.com/media/cB7LG5VgPhuV9KBI4H/giphy.gif)</br>
-
+![Adding a new Recipe 1](https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif)
 ### Single Recipe
 
-![Recipe page](file:///Users/hbo-214/Desktop/single-recipe-page.png)
+![Recipe page](file:///Volumes/SeagateFD/screenShots/Mod4%20screen%20shots/single-recipe-page.png)
 
 ### Adding a Recipe, Dynamically expanding Ingredients
 
-![Adding a new Recipe 1](https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif)
+
 ![Adding a new Recipe 2](https://media.giphy.com/media/VgAZqoMRB9wD87ohdF/giphy.gif)</br>
 
 ## Contributing

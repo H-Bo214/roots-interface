@@ -48,10 +48,10 @@ Wire frames and component structure are located [here](https://miro.com/app/boar
 
 
 ### Wins
-The Styling of many of the components evolved as we met and presented with the BE group to become a pleasant UX. We successfully met our MVP while learning brand new technologies. Successfully collaborated with a great team of Back-end engineers to build an application from the ground up.
+The Styling of many of the components evolved as we met and presented with the BE group to become a pleasant UX. Implemented new technologies with Apollo client and GraphQl. Successfully collaborated with a great team of Back-end engineers to build an application from the ground up.
 
 ### Struggles
-Learning GraphQL and Apollo lead us to spend a fair amount of time researching all of its features. The cache proved challenging to understand in its early stages. Getting our quires and mutations to function properly took some effort to accomplish. This was mostly due to the unfamiliar syntax requirements of Apollo and GraphQl as well as learning a new unfamiliar technology. Additional challenges included asynchronous testing and automated heroku deployment.
+Learning GraphQL and Apollo lead us to spend a fair amount of time researching all of its features. The cache proved challenging to understand in its early stages. Getting our queries and mutations to function properly took some effort to accomplish. This was mostly due to the unfamiliar syntax requirements of Apollo and GraphQl as well as learning a new unfamiliar technology. We currently have a bug regarding the addition and display of ingredients when a new recipe is added. Unfortunately, due to time constraints we were unable to address this issue. Additional challenges included asynchronous testing and automated heroku deployment.
 
 ## Installation
 

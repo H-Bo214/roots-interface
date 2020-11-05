@@ -85,7 +85,7 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 ![Adding a new Recipe 1](https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif)
 ### Single Recipe
 
-![Recipe page](file:///Volumes/SeagateFD/screenShots/Mod4%20screen%20shots/single-recipe-page.png)
+![Recipe page](file:///Users/hbo-214/Desktop/single-recipe-page.png)
 
 ### Adding a Recipe, Dynamically expanding Ingredients
 

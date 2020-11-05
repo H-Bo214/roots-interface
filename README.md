@@ -48,12 +48,10 @@ Wire frames and component structure are located [here](https://miro.com/app/boar
 
 
 ### Wins
-
-The Styling of many of the components evolved as we met and presented with the BE group to become a pleasant UX.
+The Styling of many of the components evolved as we met and presented with the BE group to become a pleasant UX. We successfully met our MVP while learning brand new technologies. Successfully collaborated with a great team of Back-end engineers to build an application from the ground up.
 
 ### Struggles
-
-Learning graphQL and apollo lead us to spend a fair amount of time researching all of its features. The cache proved challenging to understand in its early stages. Getting our quires and mutations to function properly took some effort to accomplish as well. 
+Learning GraphQL and Apollo lead us to spend a fair amount of time researching all of its features. The cache proved challenging to understand in its early stages. Getting our quires and mutations to function properly took some effort to accomplish. This was mostly due to the unfamiliar syntax requirements of Apollo and GraphQl as well as learning a new unfamiliar technology. Additional challenges included asynchronous testing and automated heroku deployment.
 
 ## Installation
 
@@ -78,19 +76,21 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 
 ### Landing Page, Adding a new Book, Navigating to a Book
 
-![GIF DESCRIPTION.... ](gif url)
+![Adding a new book](https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif)</br>
+![Navigating to newly created book](https://media.giphy.com/media/fLkADmh4izAR3r0nYe/giphy.gif)</br>
+
 
 ### Recipe Book, Navigating to a Recipe, Navigating to the add form
-
-![GIF DESCRIPTION.... ](gif url)
+![Navigating to an existing recipe](https://media.giphy.com/media/cB7LG5VgPhuV9KBI4H/giphy.gif)</br>
 
 ### Single Recipe
 
-![GIF DESCRIPTION.... Likely just an image of the page](gif url)
+![Recipe page](file:///Users/hbo-214/Desktop/single-recipe-page.png)
 
 ### Adding a Recipe, Dynamically expanding Ingredients
 
-![GIF DESCRIPTION.... ](gif url)
+![Adding a new Recipe 1](https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif)
+![Adding a new Recipe 2](https://media.giphy.com/media/VgAZqoMRB9wD87ohdF/giphy.gif)</br>
 
 ## Contributing
 

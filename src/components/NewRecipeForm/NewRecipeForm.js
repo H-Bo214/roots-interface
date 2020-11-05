@@ -56,6 +56,7 @@ const NewRecipeForm = ({ user, bookId }) => {
   };
 
   const handleAddIngredient = e => {
+    e.preventDefault();
     setIngredients([
       ...ingredients,
       {
@@ -66,7 +67,8 @@ const NewRecipeForm = ({ user, bookId }) => {
     ]);
   };
 
-  const handleRemoveIngredient = index => {
+  const handleRemoveIngredient = (e, index) => {
+    e.preventDefault();
     const values = [...ingredients];
     if (values.length > 1) {
       values.splice(index, 1);
@@ -112,8 +114,8 @@ const NewRecipeForm = ({ user, bookId }) => {
               placeholder="Measurement"
               onChange={e => handleChange(e, index)}
             />
-            <button onClick={() => handleAddIngredient()}>Ingredient + </button>
-            <button onClick={() => handleRemoveIngredient(index)}>
+            <button onClick={(e) => handleAddIngredient(e)}>Ingredient + </button>
+            <button onClick={(e) => handleRemoveIngredient(e, index)}>
               Ingredient -{' '}
             </button>
           </div>

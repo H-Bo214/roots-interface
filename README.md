@@ -75,7 +75,7 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 ## Functionality
 
 ### Landing Page, Adding a new Book, Navigating to a Book
-<img src="https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif?raw=true" width="100%">
+<img src="https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif?raw=true" width="75%">
 
 ![Adding a new book](https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif)</br>
 ![Navigating to newly created book](https://media.giphy.com/media/fLkADmh4izAR3r0nYe/giphy.gif)</br>

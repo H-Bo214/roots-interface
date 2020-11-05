@@ -75,24 +75,18 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 ## Functionality
 
 ### Landing Page, Adding a new Book, Navigating to a Book
-<img src="https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif?raw=true" width="75%">
-
-![Adding a new book](https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif)</br>
-![Navigating to newly created book](https://media.giphy.com/media/fLkADmh4izAR3r0nYe/giphy.gif)</br>
-
+<img src="https://media.giphy.com/media/4iUYyLYAs2jtnEatlU/giphy.gif?raw=true" width="75%"> </br>
+<img src="https://media.giphy.com/media/fLkADmh4izAR3r0nYe/giphy.gif?raw=true" width="75%">
 
 ### Recipe Book, Navigating to a Recipe, Navigating to the add form
-![Navigating to an existing recipe](https://media.giphy.com/media/cB7LG5VgPhuV9KBI4H/giphy.gif)</br>
-![Adding a new Recipe 1](https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif)
+<img src="https://media.giphy.com/media/cB7LG5VgPhuV9KBI4H/giphy.gif?raw=true" width="75%">
+<img src="https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif?raw=true" width="75%">
+
 ### Single Recipe
 <img src="https://user-images.githubusercontent.com/50157153/98288706-7c727a80-1f64-11eb-89e3-675ea3d72dd8.png?raw=true" alt="Logo for Roots" width="480px" height="252px">
 
-
-
 ### Adding a Recipe, Dynamically expanding Ingredients
-
-
-![Adding a new Recipe 2](https://media.giphy.com/media/VgAZqoMRB9wD87ohdF/giphy.gif)</br>
+<img src="https://media.giphy.com/media/VgAZqoMRB9wD87ohdF/giphy.gif?raw=true" width="75%">
 
 ## Contributing
 

@@ -83,7 +83,7 @@ You can also see the product online here. [Deployed](https://roots-interface.her
 <img src="https://media.giphy.com/media/nR037eveJxYjip2Edj/giphy.gif?raw=true" width="75%">
 
 ### Single Recipe
-<img src="https://user-images.githubusercontent.com/50157153/98288706-7c727a80-1f64-11eb-89e3-675ea3d72dd8.png?raw=true" alt="Logo for Roots" width="480px" height="252px">
+<img src="https://user-images.githubusercontent.com/50157153/98288706-7c727a80-1f64-11eb-89e3-675ea3d72dd8.png?raw=true" alt="Logo for Roots" width="759px" height="398px">
 
 ### Adding a Recipe, Dynamically expanding Ingredients
 <img src="https://media.giphy.com/media/VgAZqoMRB9wD87ohdF/giphy.gif?raw=true" width="75%">
